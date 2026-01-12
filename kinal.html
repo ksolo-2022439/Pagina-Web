@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundación Kinal - Formando el Futuro</title>
+    <style>
+        :root {
+            --primary-color: #002855;
+            --secondary-color: #0056b3;
+            --accent-color: #e63946;
+            --text-color: #333;
+            --light-bg: #f4f7f6;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--primary-color);
+            transition: color 0.3s;
+            font-size: 16px;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary-color);
+        }
+
+        .btn-cta {
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 10px 25px;
+            border-radius: 5px;
+            font-weight: 700;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        .btn-cta:hover {
+            background-color: #d62839;
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            position: relative;
+            height: 85vh;
+            background-image: linear-gradient(rgba(0, 40, 85, 0.7), rgba(0, 40, 85, 0.7)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn-hero {
+            background-color: var(--white);
+            color: var(--primary-color);
+            padding: 15px 35px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 18px;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-hero:hover {
+            background-color: var(--accent-color);
+            color: var(--white);
+        }
+
+        .stats-bar {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 40px 0;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 36px;
+            font-weight: 800;
+        }
+
+        .stat-item p {
+            font-size: 14px;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .programs {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--primary-color);
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-img {
+            height: 200px;
+            background-color: #ddd;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .card p {
+            color: #666;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .card-link {
+            color: var(--secondary-color);
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .card-link::after {
+            content: '→';
+            margin-left: 5px;
+            transition: margin-left 0.2s;
+        }
+
+        .card-link:hover::after {
+            margin-left: 10px;
+        }
+
+        .cta-section {
+            background-color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+
+        .footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 60px 20px 20px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer ul li a {
+            color: #ccc;
+            transition: color 0.3s;
+        }
+
+        .footer ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: #888;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none; 
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .stats-container {
+                flex-direction: column;
+                gap: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span>KINAL</span>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#" class="nav-link">Nosotros</a></li>
+                    <li><a href="#" class="nav-link">Básicos</a></li>
+                    <li><a href="#" class="nav-link">Diversificado</a></li>
+                    <li><a href="#" class="nav-link">Cursos Técnicos</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="btn-cta">Admisiones 2026</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>El trabajo bien hecho</h1>
+            <p>Formamos jóvenes profesionales con excelencia académica y valores humanos para transformar la sociedad.</p>
+            <a href="#programas" class="btn-hero">Explorar Oferta Académica</a>
+        </div>
+    </section>
+
+    <div class="stats-bar">
+        <div class="stats-container">
+            <div class="stat-item">
+                <h3>+60</h3>
+                <p>Años de Experiencia</p>
+            </div>
+            <div class="stat-item">
+                <h3>1,500+</h3>
+                <p>Alumnos Graduados</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Enfoque Práctico</p>
+            </div>
+        </div>
+    </div>
+
+    <main id="programas" class="programs">
+        <div class="section-title">
+            <h2>Nuestra Formación</h2>
+            <p>Descubre los programas educativos diseñados para desarrollar tus habilidades técnicas y humanas.</p>
+        </div>
+
+        <div class="cards-grid">
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Ciclo Básico" class="card-img">
+                <div class="card-content">
+                    <h3>Ciclo Básico</h3>
+                    <p>Una base sólida académica complementada con formación técnica inicial. El primer paso hacia la excelencia profesional.</p>
+                    <a href="#" class="card-link">Ver plan de estudios</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a782?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Diversificado" class="card-img">
+                <div class="card-content">
+                    <h3>Diversificado y Perito</h3>
+                    <p>Especialízate en Informática, Electrónica, Mecánica o Dibujo Técnico. Gradúate con experiencia real y alta demanda laboral.</p>
+                    <a href="#" class="card-link">Ver carreras técnicas</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Cursos Libres" class="card-img">
+                <div class="card-content">
+                    <h3>Cursos Técnicos</h3>
+                    <p>Capacitación continua para adultos y profesionales que desean actualizar sus conocimientos en tecnología e industria.</p>
+                    <a href="#" class="card-link">Ver cursos disponibles</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="section-title" style="margin-bottom: 30px;">
+            <h2>¿Listo para ser parte de Kinal?</h2>
+            <p>Inicia tu proceso de admisión hoy mismo y asegura tu futuro profesional.</p>
+        </div>
+        <a href="#" class="btn-cta" style="padding: 15px 40px; font-size: 18px;">Solicitar Información</a>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>Contacto</h4>
+                <ul>
+                    <li>6a. Avenida 13-54, Zona 7</li>
+                    <li>Colonia Landívar, Ciudad de Guatemala</li>
+                    <li>PBX: +(502) 2387-7600</li>
+                    <li>info@kinal.org.gt</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#">Proceso de Admisión</a></li>
+                    <li><a href="#">Portal de Alumnos</a></li>
+                    <li><a href="#">Bolsa de Empleo</a></li>
+                    <li><a href="#">Donaciones</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Sobre Nosotros</h4>
+                <ul>
+                    <li><a href="#">Historia</a></li>
+                    <li><a href="#">Misión y Visión</a></li>
+                    <li><a href="#">Autoridades</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Fundación Kinal. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
