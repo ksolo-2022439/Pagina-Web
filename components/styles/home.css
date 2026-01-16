@@ -1,0 +1,161 @@
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px 0;
+    margin-bottom: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    border-bottom: none;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.lead {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #3b78b6;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2c5d8f;
+    color: #fff;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #3b78b6;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.interest-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.interest-card:hover {
+    transform: translateY(-5px);
+}
+
+.interest-card .card-content {
+    padding: 30px;
+}
+
+.interest-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: #2c3e50;
+}
+
+.f1-theme {
+    border-left: 5px solid #1f3a93;
+}
+
+.tech-theme {
+    border-left: 5px solid #27ae60;
+}
+
+.objectives-container {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #e1e1e1;
+}
+
+.objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.obj-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    text-align: center;
+}
+
+.obj-box h4 {
+    color: #3b78b6;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.obj-box p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        text-align: center;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+}

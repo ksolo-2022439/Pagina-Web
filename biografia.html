@@ -1,57 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Mí - Autobiografía</title>
+    <title>Sobre Mí - Kenneth Solórzano</title>
     <link rel="stylesheet" href="components/styles/main.css">
+    <link rel="stylesheet" href="components/styles/bio.css">
 </head>
+
 <body>
 
     <div id="global-header"></div>
 
     <main class="container">
-        <h1>Autobiografía</h1>
 
-        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-            
-            <div style="flex: 1; min-width: 200px;">
-                <div class="img-placeholder" style="height: 250px;">
-                    <img src="components/sections/biografia/foto.jpg" alt="Banner principal">
+        <section class="bio-intro fade-in">
+            <h1>Hola, soy Kenneth Solórzano</h1>
+
+            <div class="profile-layout">
+                <div class="profile-image-container">
+                    <img src="components/sections/biografia/foto.jpg" alt="Foto de Kenneth Solórzano"
+                        class="profile-img">
+                </div>
+
+                <div class="profile-text">
+                    <h2>Un apasionado por la tecnología</h2>
+                    <p>
+                        Mi nombre completo es <strong>Kenneth Franklin Solórzano Canás</strong> y nací el 19 de
+                        noviembre del 2007 en la Ciudad de Guatemala.
+                    </p>
+                    <p>
+                        Soy un joven dedicado. Desde muy pequeño, mi papá me introdujo al mundo digital a través de
+                        dispositivos electrónicos y consolas de Nintendo. Lo que empezó como un juego, se convirtió en
+                        una pasión por entender cómo funcionan las cosas "detrás de la pantalla".
+                    </p>
+                    <p>
+                        Actualmente, transformo esa curiosidad en código estudiando <strong>Sexto Perito en
+                            Informática</strong> en el Centro Educativo Técnico Laboral Kinal.
+                    </p>
                 </div>
             </div>
+        </section>
 
-            <div style="flex: 2;">
-                <h2>¿Quién soy?</h2>
-                <p>
-                    Hola, mi nombre es Kenneth Franklin Solórzano Canás, nací el 19 de noviembre del 2007 en Ciudad de Guatemala. Desde pequeño mi papá siempre me inculcó el uso
-                    de los dipositivos electrónicos y consolas de Nintendo, por lo que soy muy aficionado de los videjuegos y también disfruto mucho de aprender cosas utilizando dispositivos
-                    electrónicos.
-                </p>
-                <p>
-                    Actualmente soy estudiante de Sexto Périto en Informática en el Centro Educativo Técnico Laboral Kinal. Me apasiona aprender cosas nuevas y desarrollar proyectos que tengan un impacto positivo.
-                </p>
+        <hr class="divider">
+
+        <section class="bio-section">
+            <h3>- Mis Habilidades Tecnológicas</h3>
+            <p>A lo largo de mi formación en Kinal y el autoaprendizaje, he desarrollado competencias en:</p>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="icon">☕</div>
+                    <h4>Java</h4>
+                    <p>Desarrollo de lógica de programación y aplicaciones de escritorio.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="icon">🌐</div>
+                    <h4>Desarrollo Web</h4>
+                    <p>HTML5, CSS3 y JavaScript para crear experiencias interactivas.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="icon">🐍</div>
+                    <h4>Python</h4>
+                    <p>Automatización básica y análisis de datos introductorio.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="icon">🔧</div>
+                    <h4>Soporte TI</h4>
+                    <p>Mantenimiento y comprensión de hardware y software.</p>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <hr style="margin: 30px 0; border: 0; border-top: 1px solid #ddd;">
+        <section class="bio-section alternate-bg">
+            <h3>- Más allá del código</h3>
+            <p>No todo es trabajo. Creo firmemente que la creatividad nace de disfrutar lo que hacemos.</p>
 
-        <section>
-            <h3>Trayectoria y Habilidades</h3>
-            <p>
-                A lo largo de los años he aprendido bastantes cosas tanto en el colegio como por cuenta propia, algunas de las cosas que he aprendido serán listadas a continuación:
-            </p>
-            
-            <ul>
-                <li><strong>Educación:</strong> Estudiando en Kinal desde el año 2022</li>
-                <li><strong>Experiencia:</strong> Conocimientos breves en Java, JavaScript, Python. Conocimientos algo mayores en creación de páginas web.</li>
-                <li><strong>Hobbies:</strong> Programar, jugar videojuegos, planificar cosas a futuro.</li>
+            <ul class="hobbies-list">
+                <li>
+                    <strong>Gaming:</strong> Fanático de Nintendo. Mis juegos favoritos me han enseñado sobre narrativa
+                    y resolución de problemas.
+                </li>
+                <li>
+                    <strong>Aprendizaje continuo:</strong> Me encanta ver videos sobre nuevas tecnologías y gadgets.
+                </li>
+                <li>
+                    <strong>Planificación:</strong> Disfruto organizar mis proyectos y metas a futuro para tener un
+                    camino claro.
+                </li>
             </ul>
         </section>
+
+        <hr class="divider">
+
+        <section class="bio-section">
+            <h3>- Mis Metas a Futuro</h3>
+            <div class="goals-container">
+                <div class="goal-box">
+                    <h4>Corto Plazo</h4>
+                    <p>Graduarme con un buen promedio de Kinal y desarrollar un portafolio web sólido con proyectos reales.</p>
+                </div>
+                <div class="goal-box">
+                    <h4>Largo Plazo</h4>
+                    <p>Convertirme en un Desarrollador Full Stack profesional y crear soluciones de software que ayuden
+                        a las personas en Guatemala.</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <div id="global-footer"></div>
     <script src="js/loader.js"></script>
 
 </body>
+
 </html>

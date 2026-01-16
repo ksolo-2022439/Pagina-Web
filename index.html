@@ -3,44 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - Bienvenido</title>
+    <title>Inicio - Kenneth Solórzano</title>
     <link rel="stylesheet" href="components/styles/main.css">
+    <link rel="stylesheet" href="components/styles/home.css">
 </head>
 <body>
 
     <div id="global-header"></div>
 
     <main class="container">
-        <h1>Bienvenidos a mi Sitio Web</h1>
         
-        <div class="img-placeholder">
-            <img src="components/sections/index/BannerIndex.webp" alt="Banner principal">
-        </div>
-
-        <section>
-            <h2>Introducción</h2>
-            <p>
-                Hola, soy Kenneth Solórzano, bienvenido a mi página web. En esta página voy a comentar varias cosas acerca de mi, incluyendo mis gustos,
-                a que cosas les dedico tiempo, entre otra información que me gustaría agregar.
-            </p>
-            <p>
-                Soy aficionado de los deportes automovilisticos, especificamente de la Fórmula 1, y mi piloto favorito es Max Verstappen, piloto de 
-                Oracle Red Bull Racing. También me gusta jugar todo tipo de videojuegos en mi tiempo libre y desarrollar programas sencilos para mejorar
-                mi eficiencia en distintos campos.
-            <p> 
-                Le dedico bastante tiempo a jugar videojuegos y mejorar mis conocimientos respecto a la computación en lenguajes de programación en los cuales
-                me veo interesado.
-            </p>
+        <section class="hero-section">
+            <div class="hero-text">
+                <h1>Bienvenid@ a mi página web</h1>
+                <p class="lead">
+                    Hola, soy Kenneth Solórzano. Este sitio es una actividad sobre mi trayectoria como estudiante de informática, mis proyectos personales y las pasiones que me impulsan día a día.
+                </p>
+                <a href="biografia.html" class="btn-primary">Conocer más sobre mí</a>
+            </div>
+            <div class="hero-image">
+                <img src="components/sections/index/BannerIndex.webp" alt="Espacio de trabajo y tecnología">
+            </div>
         </section>
 
-        <section>
-            <h3>Objetivos</h3>
-            <ul>
-                <li>Dar una introduccción hacía mi persona.</li>
-                <li>Poder presentar una autobiografía clara.</li>
-                <li>Realizar una propuesta para la página de Kinal.</li>
-            </ul>
+        <section class="interests-section">
+            <h2 class="section-title">Lo que me apasiona</h2>
+            <div class="interests-grid">
+                
+                <div class="interest-card f1-theme">
+                    <div class="card-content">
+                        <h3>Automovilismo y F1</h3>
+                        <p>
+                            Soy un gran aficionado de la velocidad y la estrategia. Sigo de cerca la Fórmula 1, apoyando al equipo Oracle Red Bull Racing.
+                        </p>
+                        <p>
+                            Admiro la tenacidad de <strong>Max Verstappen</strong>, cuyo estilo de conducción agresivo y calculador me inspira a buscar la excelencia en mis propios retos.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="interest-card tech-theme">
+                    <div class="card-content">
+                        <h3>Gaming y Desarrollo</h3>
+                        <p>
+                            En mi tiempo libre, los videojuegos son mi principal fuente de entretenimiento e inspiración lógica.
+                        </p>
+                        <p>
+                            Aprovecho esta afición para potenciar mi creatividad y desarrollar pequeños programas que automaticen tareas o resuelvan problemas cotidianos, mejorando constantemente mi eficiencia técnica.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
         </section>
+
+        <section class="objectives-container">
+            <h2 class="section-title">Objetivos del Sitio</h2>
+            <div class="objectives-grid">
+                <div class="obj-box">
+                    <h4>Presentación Personal</h4>
+                    <p>Brindar una introducción clara hacia mi perfil profesional y humano.</p>
+                </div>
+                <div class="obj-box">
+                    <h4>Autobiografía</h4>
+                    <p>Documentar mi historia, antecedentes y crecimiento académico.</p>
+                </div>
+                <div class="obj-box">
+                    <h4>Propuesta Académica</h4>
+                    <p>Desarrollar una estructura web sólida para el proyecto de Kinal.</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <div id="global-footer"></div>
