@@ -22,10 +22,12 @@ body {
 .header-container {
     max-width: 1200px;
     margin: 0 auto;
-    height: 70px;
+    min-height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
 }
 
 .logo {
@@ -39,11 +41,12 @@ body {
     display: block;
 }
 
-
 .main-nav ul {
     display: flex;
     list-style: none;
     gap: 30px;
+    margin: 0;
+    padding: 0;
 }
 
 .main-nav a {
@@ -71,6 +74,7 @@ body {
     border-radius: 4px;
     font-weight: 600;
     transition: background 0.3s;
+    text-align: center;
 }
 
 .btn-admissions {
@@ -81,6 +85,7 @@ body {
     border-radius: 4px;
     font-weight: 600;
     transition: background 0.3s;
+    text-align: center;
 }
 
 .btn-admissions:hover {
@@ -92,17 +97,17 @@ body {
                 url('../sections/propuesta/centro.png'); 
     background-size: cover;
     background-position: center;
-    height: 500px;
+    min-height: 500px;
     display: flex;
     align-items: center;
     color: white;
     text-align: center;
+    padding: 40px 20px;
 }
 
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
 }
 
 .hero-content h1 {
@@ -113,6 +118,8 @@ body {
 
 .hero-content h1 img {
     filter: brightness(0) invert(1);
+    max-width: 100%;
+    height: auto;
 }
 
 .hero-lead {
@@ -126,6 +133,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .btn-primary {
@@ -135,6 +143,7 @@ body {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    display: inline-block;
 }
 
 .btn-secondary {
@@ -144,15 +153,17 @@ body {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    display: inline-block;
 }
 
 .stats-bar {
     background-color: #f4f4f4;
-    padding: 30px 0;
+    padding: 30px 20px;
     display: flex;
     justify-content: center;
     gap: 80px;
     border-bottom: 1px solid #ddd;
+    flex-wrap: wrap;
 }
 
 .stat-item {
@@ -196,7 +207,7 @@ body {
 
 .programs-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
@@ -217,10 +228,6 @@ body {
     height: 150px;
     background-color: #ddd;
 }
-
-.code-bg { background: linear-gradient(45deg, #2b5876, #4e4376); }
-.elec-bg { background: linear-gradient(45deg, #cc2b5e, #753a88); }
-.mech-bg { background: linear-gradient(45deg, #42275a, #734b6d); }
 
 .card-header img {
     width: 100%;
@@ -246,7 +253,6 @@ body {
     font-weight: 600;
 }
 
-/* Boton volver */
 .back-link-container {
     text-align: center;
     padding: 40px;
@@ -259,19 +265,57 @@ body {
     border: 1px solid #fff;
     padding: 10px 20px;
     border-radius: 4px;
+    display: inline-block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .header-container {
         flex-direction: column;
-        height: auto;
-        padding: 15px;
-        gap: 15px;
+        gap: 20px;
+        padding: 20px 0;
     }
+
     .main-nav ul {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 15px;
     }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .cta-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-portal, .btn-admissions {
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
     .stats-bar {
         flex-direction: column;
         gap: 30px;
